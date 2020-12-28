@@ -6,7 +6,7 @@
 /* USB Device descriptor parameter */
 #define VENDOR_ID       0x9650
 #define PRODUCT_ID      0x2800
-#define MANUFACTURER    ec965
+#define MANUFACTURER    github.com/ec965
 #define PRODUCT         dropout 
 #define DESCRIPTION     numpad
 
@@ -39,10 +39,14 @@
 #define PREVENT_STUCK_MODIFIERS
 
 
-// use the backlight implementation for numlock
-// there is only 1 led which is connected to the num lock key
+// This keyboard uses the backlight implementation for the numlock.
+// Therefore, the user can control the brightness of the numlock led using backlight controls.
+// there is only 1 switch led which is on the numlock key (on the default keymap).
+// define BACKLIGHT_NUMLOCK to use the backlight implementation to control the numlock led
+// if BACKLIGHT_NUMLOCK is not defined, the regular numlock implementation will be used.
+#define BACKLIGHT_NUMLOCK
 #define BKACLIGHT_LEVELS 6
-#define BACKLIGHT_BREATHING
-#define BACKLIGHT_ON_STATE 0 //backlight is on when pin is low
+/* #define BACKLIGHT_BREATHING */
+#define BACKLIGHT_ON_STATE 0 //baklight is on when pin is low
 
 #endif
