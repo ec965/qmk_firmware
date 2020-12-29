@@ -1,4 +1,5 @@
 #include "dropout.h"
+#include "encoder.h"
 
 void led_init_kb(void){
 #ifndef BACKLIGHT_NUMLOCK
@@ -28,8 +29,8 @@ bool led_update_kb(led_t led_state) {
   return res;
 }
 
-void encoder_update_kb(uint8_t index, bool clockwise) {
-
+void encoder_update_kb(int8_t index, bool clockwise) {
+    encoder_update_user(index, clockwise);
 }
 
 void matrix_init_kb(void){
