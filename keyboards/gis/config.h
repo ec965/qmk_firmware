@@ -22,7 +22,7 @@
 #define PRODUCT_ID      0x1023
 #define DEVICE_VER      0x0001
 #define MANUFACTURER    github.com/ec965
-#define PRODUCT         askbp
+#define PRODUCT         gis
 #define DESCRIPTION     split-keyboard
 
 /* key matrix size */
